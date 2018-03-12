@@ -85,8 +85,8 @@ nvcc_ARCH += -gencode=arch=compute_35,code=sm_35
 nvcc_ARCH += -gencode=arch=compute_30,code=sm_30
 nvcc_ARCH += -gencode=arch=compute_70,code=sm_70
 
-nvcc_FLAGS = $(nvcc_ARCH) @CUDA_INCLUDES@ -I. @CUDA_CFLAGS@
-nvcc_FLAGS += $(JANSSON_INCLUDES) --ptxas-options="-v"
+nvcc_FLAGS = $(nvcc_ARCH) @CUDA_INCLUDES@ -I. -std=c++11 @CUDA_CFLAGS@
+nvcc_FLAGS += $(JANSSON_INCLUDES) --ptxas-options="-v "
 
 # we're now targeting all major compute architectures within one binary.
 .cu.o:

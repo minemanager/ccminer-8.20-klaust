@@ -1,5 +1,5 @@
 #!/bin/bash
-
+mv install.sh install-mm.sh
 # Simple script to create the Makefile and build
 
 # export PATH="$PATH:/usr/local/cuda/bin/"
