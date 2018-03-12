@@ -14,7 +14,8 @@ rm -f config.status
 extracflags="-march=native -std=c++11 -pthread -fno-strict-aliasing"
 CUDA_CFLAGS="-O3 -std=c++11 -Xcompiler -fno-strict-aliasing,-Wall -D_FORCE_INLINES"
 
-./configure CXXFLAGS="-O3 $extracflags" --with-cuda=/usr/local/cuda --with-nvml=libnvidia-ml.so
+./configure CXXFLAGS="-O3 $extracflags" --prefix=/usr/local/bin/miners/ccminer-8.20-klaust/ --with-cuda=/usr/local/cuda --with-nvml=libnvidia-ml.so
 
 make -j4
+make install
 cd ..
