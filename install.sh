@@ -17,3 +17,4 @@ CUDA_CFLAGS="-O3 -std=c++11 -Xcompiler -fno-strict-aliasing,-Wall -D_FORCE_INLIN
 ./configure CXXFLAGS="-O3 $extracflags" --with-cuda=/usr/local/cuda --with-nvml=libnvidia-ml.so
 
 make -j4
+cd ..
